@@ -1,0 +1,95 @@
+/* pages/test/test.wxss */
+.subject {
+  text-align: center;
+  font-weight:900;
+  font-size: xx-large;
+  background-color: lightblue;
+  width: 500rpx;
+  margin: 0 auto;
+  border-radius: 75rpx;
+  height: 150rpx;
+  line-height: 140rpx;
+  margin-bottom: 60rpx;
+}
+.line1 {
+  border-radius: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.line1-left {
+background: pink;
+border-radius: 60rpx;
+width: 200rpx;
+display: inline-block;
+line-height: 200rpx;
+text-align: center;
+font-weight: 900;
+}
+.line1-mid {
+width: 200rpx;
+display: inline-block;
+height: 300rpx;
+text-align: center;
+line-height: 100rpx;
+}
+.line1-right {
+  width: 200rpx;
+display: inline-block;
+height: 300rpx;
+text-align: center;
+line-height: 100rpx;
+}
+.line2 {
+  display: flex;
+  align-items: center;
+}
+.line2-left {
+  background: pink;
+  border-radius: 60rpx;
+  width: 200rpx;
+  display: inline-block;
+  line-height: 200rpx;
+  text-align: center;
+  font-weight: 900;
+}
+.line2-mid {
+
+  width: 200rpx;
+  display: inline-block;
+  height: 200rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.line2-right {
+  width: 200rpx;
+  display: inline-block;
+  height: 200rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.line3 {
+  display: flex;
+  align-items: center;
+}
+.line3-left {
+  background: pink;
+  border-radius: 60rpx;
+  width: 200rpx;
+  display: inline-block;
+  line-height: 500rpx;
+  text-align: center;
+  font-weight: 900;
+}
+.line3-mid {
+
+  width: 200rpx;
+  display: inline-block;
+  text-align: center;
+  line-height: 100rpx;
+}
+.line3-right {
+  width: 200rpx;
+  display: inline-block;
+  text-align: center;
+  line-height: 100rpx;
+}
