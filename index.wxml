@@ -1,0 +1,125 @@
+<!--pages/test/test.wxml-->
+<view class="subject">检测系统</view>
+<view class="line1">
+
+<view class="line1-left">倾角传感器</view>
+
+<view class="line1-mid">
+<view> X轴倾角 </view>
+<view> Y轴倾角 </view>
+<view> Z轴倾角 </view>
+</view>
+
+<view class="line1-right">
+<view>{{data[0]}}</view>
+<view>{{data[1]}}</view>
+<view>{{data[2]}}</view>
+</view>
+
+</view>
+
+  
+
+<view class="line3">
+
+  <view class="line3-left">振动传感器</view>
+
+<view class="line3-mid">
+<view> X轴加速度 </view>
+<view> X轴振动频率 </view>
+<view> Y轴加速度 </view>
+<view> Y轴振动频率 </view>
+<view> Z轴加速度 </view>
+<view> Z轴振动频率 </view>
+</view>
+
+<view class="line3-right">
+<view>{{data[3]}}</view>
+<view>{{data[4]}}</view>
+<view>{{data[5]}}</view>
+<view>{{data[6]}}</view>
+<view>{{data[7]}}</view>
+<view>{{data[8]}}</view>
+</view>
+
+</view>
+
+<view class="line2">
+
+<view class="line2-left">温湿度传感器</view>
+
+<view class="line2-mid">
+<view> 温度 </view>
+<view> 湿度 </view>
+</view>
+
+<view class="line2-right">
+<view>{{data[9]}}</view>
+<view>{{data[10]}}</view>
+</view>
+
+</view>
+
+<view class="line3">
+
+<view class="line3-left">GPGGA</view>
+
+<view class="line3-mid">
+<view> UTC时间 </view>
+<view> 纬度 </view>
+<view> 纬度方向 </view>
+<view> 经度 </view>
+<view> 纬度方向 </view>
+<view> 高程 </view>
+</view>
+
+<view class="line3-right">
+<view>{{data[11]}}</view>
+<view>{{data[12]}}</view>
+<view>{{data[13]}}</view>
+<view>{{data[14]}}</view>
+<view>{{data[15]}}</view>
+<view>{{data[16]}}</view>
+</view>
+
+</view>
+
+<view class="line3">
+
+<view class="line3-left">姿态传感器</view>
+
+<view class="line3-mid">
+<view> x轴角速度 </view>
+<view> Y轴角速度 </view>
+<view> Z轴角速度 </view>
+<view> X轴磁力计 </view>
+<view> Y轴磁力计 </view>
+<view> Z轴磁力计 </view>
+</view>
+
+<view class="line3-right">
+<view>{{data[17]}}</view>
+<view>{{data[18]}}</view>
+<view>{{data[19]}}</view>
+<view>{{data[20]}}</view>
+<view>{{data[21]}}</view>
+<view>{{data[22]}}</view>
+</view>
+
+</view>
+
+<view class="line2">
+
+<view class="line2-left">电量计</view>
+
+<view class="line2-mid">
+<view> 电量百分比 </view>
+<view> 电池电压 </view>
+</view>
+
+<view class="line2-right">
+<view>{{data[23]}}</view>
+<view>{{data[24]}}</view>
+</view>
+
+</view>
