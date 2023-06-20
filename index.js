@@ -4,7 +4,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    data:[]
+    data:[],
+    node:"0000000098f10ef3"
   },
 
   /**
@@ -17,7 +18,8 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+    this.getData();
+    this.startButton();
   },
 
   /**
@@ -45,12 +47,36 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+    
+  },
+
+
+  getData(){
     var that=this;
     try{
     wx.request({
       url: 'https://www.abc123abc123.top/mqtt.php',
       method: "GET",
       dataType: "json",
+      data:{
+        node:that.data.node
+      },
+      header: {
+      'content-type': 'application/json'
+      },
       success: function(res) {
         console.log(res.data);
         var data = res.data[0]; // 将JSON格式的数据转换成JavaScript对象
@@ -80,33 +106,29 @@ Page({
         arrayData[22]=data.Z_axis_magnetometer;
         arrayData[23]=data.Percentage_of_electric_quantity;
         arrayData[24]=data.cell_voltage;
+        arrayData[25]=data.date;
         that.setData({
           data: arrayData // 将数组赋值给data属性
         });
       }
     });
-   wx.showLoading({
-     title: '玩命加载中',
-   });
-   setTimeout(function () {
-    wx.hideLoading()
-  }, 2000)
   }
   catch{
     console.log("未获取到数据");
   }
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  },
+  startButton(){
+    setInterval(() => {
+      this.getData();
+    }, 6000);
+},
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    
-  },
+  showChangedData(event){
+  this.setData({
+    node:event.detail.value
+  })
+  console.log(this.data.node);
+}
+
 })
